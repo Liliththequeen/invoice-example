@@ -1,0 +1,85 @@
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #dddddd;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* mines  */
+
+.title {
+ margin:15px
+}
+
+.form-title {
+  align-self: flex-start;
+}
+
+.form-container {
+  background-color: #f2eff8;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+
+}
+
+.form-input {
+  padding-left: 10px;
+}
+
+.button{
+  background-color: #261e55;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: flex-start;
+  padding: .5rem 1rem;
+  background-color: #f2eff8;
+}
+
+.ul-style {
+  list-style: none;
+}
+
+.li-style {
+  color:#4C3077
+}
+
+.li-style:hover {
+color:#3c0f70;
+text-decoration: none;
+outline: none;
+} 
+
+
