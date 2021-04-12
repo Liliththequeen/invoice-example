@@ -1,7 +1,6 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import '../../src/App.css';
 import { Button, Col, Form, Table } from 'react-bootstrap';
-// import MainProvider from '../context/Context';
 import { useHistory } from "react-router-dom";
 import emailjs from 'emailjs-com';
 
@@ -23,7 +22,6 @@ let AddInvoice = (props) => {
     let addList = e => {
         e.preventDefault();
         setlist([...list, { name, subject, address, email, sendTo }]);
-        sendEmail(e)
     }
 
     let sendEmail = (e) => {

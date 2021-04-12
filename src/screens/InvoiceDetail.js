@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import '../../src/App.css';
 import { useLocation } from "react-router-dom";
-import { Button, Col, Form, Table } from 'react-bootstrap';
+import { Button, } from 'react-bootstrap';
 
 
 let InvoiceDetail = () => {
