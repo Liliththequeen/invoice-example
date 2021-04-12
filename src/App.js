@@ -6,23 +6,24 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Context from "./context/Context";
 import AddInvoice from "./screens/AddInvoice";
 import InvoiceDetail from "./screens/InvoiceDetail";
 import Main from "./screens/Main";
 
 
-let App = () => {
+let App = (props) => {
 
 
 
   return (
-
-    <Router>
+    <Context>
+        <Router>
       <div>
-        <nav  className="nav-link">
+        {/* <nav  className="nav-link">
           <ul className="ul-style row">
             <li > 
-              <Link className="mr-3 li-style" to={"/",sendedParam}>Main</Link>
+              <Link className="mr-3 li-style" to="/">Main</Link>
             </li>
             <li >
               <Link className="mr-3 li-style" to="/add">Add Invoice</Link>
@@ -31,12 +32,12 @@ let App = () => {
               <Link className="mr-3 li-style" to="/invoicedetail">Invoice Detail</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/invoicedetail">
+          <Route path="/detail">
             <InvoiceDetail />
           </Route>
           <Route path="/add">
@@ -48,6 +49,9 @@ let App = () => {
         </Switch>
       </div>
     </Router>
+
+    </Context>
+    
 
 
 
