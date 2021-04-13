@@ -1,12 +1,9 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import Context from "./context/Context";
 import AddInvoice from "./screens/AddInvoice";
 import InvoiceDetail from "./screens/InvoiceDetail";
 import Main from "./screens/Main";
@@ -17,7 +14,6 @@ let App = (props) => {
 
 
   return (
-    <Context>
         <Router>
       <div>
         {/* <nav  className="nav-link">
@@ -50,7 +46,6 @@ let App = (props) => {
       </div>
     </Router>
 
-    </Context>
     
 
 

@@ -4,10 +4,7 @@ import { Button, Col, Form, Table } from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
 import emailjs from 'emailjs-com';
 
-
 let AddInvoice = (props) => {
-    // states for form index
-    //   const {list,setlist} = useContext(MainProvider)
 
     const [name, setname] = useState("");
     const [email, setemail] = useState("");
@@ -22,6 +19,7 @@ let AddInvoice = (props) => {
     let addList = e => {
         e.preventDefault();
         setlist([...list, { name, subject, address, email, sendTo }]);
+        localStorage.setItem("list", JSON.stringify(list));
     }
 
     let sendEmail = (e) => {
@@ -137,14 +135,16 @@ let AddInvoice = (props) => {
 
                 </div>
             </div>
+           
             {/* invoices list  */}
 
+          
             <div className="m-4">
 
 
                 <Table striped bordered hover responsive style={{ borderRadius: 5 }}>
                     {
-                        list.length == 0
+                        list.length === 0
                             ?
                             <div className="container mr-3">You haven't add any income yet.</div>
                             :
@@ -189,8 +189,6 @@ let AddInvoice = (props) => {
 
             </div>
         </div>
-
-
 
     );
 }

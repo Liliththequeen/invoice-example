@@ -9,9 +9,9 @@ let InvoiceDetail = () => {
     const location = useLocation();
 
     useEffect(() => {
-
-        console.log(location.state); // result: 'some_value'
+        console.log(location.state);
     }, [location]);
+    
     return (
         <div className="App">
             <header className="App-header">
